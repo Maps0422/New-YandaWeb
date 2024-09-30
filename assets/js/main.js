@@ -177,6 +177,33 @@
     });
   });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const articles = document.querySelectorAll(".article-item");
+    const pageLinks = document.querySelectorAll(".page-link");
+
+    function showPage(page) {
+      articles.forEach(article => {
+        if (article.getAttribute("data-page") === page) {
+          article.style.display = "block";
+        } else {
+          article.style.display = "none";
+        }
+      });
+    }
+
+    pageLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const page = this.getAttribute("data-page");
+        pageLinks.forEach(link => link.classList.remove("active"));
+        this.classList.add("active");
+        showPage(page);
+      });
+    });
+
+    // Initially show the first page
+    showPage("1");
+  });
   /**
    * Init swiper sliders
    */
