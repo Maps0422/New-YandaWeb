@@ -55,7 +55,7 @@
 
 .whatsapp-icon {
   position: fixed;
-  bottom: 60px;
+  bottom: 170px;
   right: 30px;
   background-color: #25d366; /* WhatsApp green background */
   padding: 10px;
@@ -66,6 +66,7 @@
 
 .whatsapp-icon i {
   color: white; /* Ensure the icon is visible */
+  font-size: 30px; /* Adjust the icon size */
 }
 
 
