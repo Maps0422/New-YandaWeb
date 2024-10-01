@@ -53,6 +53,22 @@
   --contrast-color: #ffffff;
 }
 
+.whatsapp-icon {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  background-color: #25d366; /* WhatsApp green background */
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Make sure it's on top of other elements */
+}
+
+.whatsapp-icon i {
+  color: white; /* Ensure the icon is visible */
+}
+
+
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
