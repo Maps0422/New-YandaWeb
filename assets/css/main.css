@@ -1549,6 +1549,36 @@ section,
   margin: 15px 0 0 0;
   padding: 0;
 }
+.testimonial-item {
+  position: relative;
+}
+
+.testimonial-text {
+  max-height: 120px; /* Adjust height to show the first few lines */
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.testimonial-item.expanded .testimonial-text {
+  max-height: none; /* Show full content when expanded */
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #0d0674;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #0056b3;
+}
 
 /*--------------------------------------------------------------
 # Features Section

@@ -223,4 +223,23 @@
 
   window.addEventListener("load", initSwiper);
 
+  document.addEventListener('DOMContentLoaded', function() {
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+  
+    readMoreButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const testimonialItem = this.closest('.testimonial-item');
+        testimonialItem.classList.toggle('expanded');
+  
+        // Toggle button text
+        if (testimonialItem.classList.contains('expanded')) {
+          this.textContent = 'Read Less';
+        } else {
+          this.textContent = 'Read More';
+        }
+      });
+    });
+  });
+  
+
 })();
