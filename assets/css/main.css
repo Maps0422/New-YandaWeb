@@ -1,15 +1,3 @@
-/**
-* Template Name: Sailor
-* Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -1025,20 +1013,22 @@ section,
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+
 }
 
 .clients .client-logo img {
   padding: 20px 40px;
   max-width: 90%;
-  transition: 0.3s;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.5;
-  filter: grayscale(100);
+  filter: grayscale(100%);
 }
 
 .clients .client-logo img:hover {
   filter: none;
   opacity: 1;
+  transform: scale(2.1); 
+  /* this is what i added for tranforming the logos */
 }
 
 @media (max-width: 640px) {
