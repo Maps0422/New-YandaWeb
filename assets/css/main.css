@@ -1,29 +1,40 @@
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #0d0674; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0d0674; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #f08103; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #0d0674;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #0d0674;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #f08103;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #0d0674;  /* The default color of the main navmenu links */
-  --nav-hover-color: #f08103; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #556270; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-color: #0d0674;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #f08103;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #556270;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #f08103;
-   /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -45,16 +56,20 @@
   position: fixed;
   bottom: 100px;
   right: 18px;
-  background-color: #25d366; /* WhatsApp green background */
+  background-color: #25d366;
+  /* WhatsApp green background */
   padding: 10px;
   border-radius: 50%;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Make sure it's on top of other elements */
+  z-index: 1000;
+  /* Make sure it's on top of other elements */
 }
 
 .whatsapp-icon i {
-  color: white; /* Ensure the icon is visible */
-  font-size: 30px; /* Adjust the icon size */
+  color: white;
+  /* Ensure the icon is visible */
+  font-size: 30px;
+  /* Adjust the icon size */
 }
 
 
@@ -212,11 +227,16 @@ h6 {
 
 
 .sitename {
-  font-size: 4rem; /* Adjust the size as needed */
-  font-weight: bold; /* Makes the text bold */
-  color: #000; /* Change color if desired */
-  line-height: 1.2; /* Adjust line-height for better spacing */
+  font-size: 4rem;
+  /* Adjust the size as needed */
+  font-weight: bold;
+  /* Makes the text bold */
+  color: #000;
+  /* Change color if desired */
+  line-height: 1.2;
+  /* Adjust line-height for better spacing */
 }
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -1007,6 +1027,47 @@ section,
 --------------------------------------------------------------*/
 .clients {
   padding: 20px 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  animation: slide 20s linear infinite;
+  white-space: nowrap;
+  width: calc(200px * 14); /* Total width of all logos (7 original + 7 duplicate) */
+}
+
+.client-logo {
+  flex: 0 0 200px; /* Fixed width for each logo */
+  min-width: 200px; /* Ensure minimum width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .client-logo img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+} */
+
+.client-logo img {
+  padding: 20px 40px;
+  max-width: 90%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
 }
 
 .clients .client-logo {
@@ -1014,6 +1075,30 @@ section,
   justify-content: center;
   align-items: center;
 
+}
+
+.logo-container:hover {
+  animation-play-state: paused;
+}
+
+/* Container to clip visible area to 6 items */
+.clients .container {
+  width: calc(200px * 6); /* Show exactly 6 items */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .client-logo img {
+      padding: 20px;
+  }
+  .clients .container {
+      width: 100%;
+  }
+  .client-logo {
+      flex: 0 0 calc(100% / 6);
+      min-width: calc(100% / 6);
+  }
 }
 
 .clients .client-logo img {
@@ -1027,8 +1112,7 @@ section,
 .clients .client-logo img:hover {
   filter: none;
   opacity: 1;
-  transform: scale(2.1); 
-  /* this is what i added for tranforming the logos */
+  transform: scale(2.1);
 }
 
 @media (max-width: 640px) {
@@ -1539,18 +1623,21 @@ section,
   margin: 15px 0 0 0;
   padding: 0;
 }
+
 .testimonial-item {
   position: relative;
 }
 
 .testimonial-text {
-  max-height: 120px; /* Adjust height to show the first few lines */
+  max-height: 120px;
+  /* Adjust height to show the first few lines */
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
 
 .testimonial-item.expanded .testimonial-text {
-  max-height: none; /* Show full content when expanded */
+  max-height: none;
+  /* Show full content when expanded */
 }
 
 .read-more-btn {

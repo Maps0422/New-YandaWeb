@@ -14,6 +14,9 @@
   <link href="assets/img/yandapic2.jpeg" rel="icon">
   <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="path/to/owl.theme.default.min.css"> -->
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -50,14 +53,10 @@
           <li class="dropdown"><a href="about.html"><span>About</span> <i
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <!---<li><a href="team.html">Team</a></li>-->
               <li><a href="testimonials.html">Testimonials</a></li>
-
             </ul>
           </li>
           <li><a href="services.html">Services</a></li>
-          
-
           <li><a href="blog.html">News</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -205,7 +204,8 @@
             <div class="service-item d-flex position-relative h-100">
               <i class="bi bi-brightness-high icon flex-shrink-0"></i>
               <div>
-                <h4 class="title"><a href="services.html" class="stretched-link">Training and Workshops:</a></h4>              </div>
+                <h4 class="title"><a href="services.html" class="stretched-link">Training and Workshops:</a></h4>
+              </div>
             </div>
           </div>
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
@@ -229,37 +229,38 @@
       </div>
     </section>
 
-    <!-- Clients Section -->
-    <section id="clients" class="clients section light-background">
-      <div class="container" data-aos="fade-up">
-        <div class="row gy-4">
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/logosImages/scieAndInov.jpeg" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+ <!-- Clients Section -->
+ <section id="clients" class="clients section light-background">
+  <div class="container">
+      <div class="logo-container">
+        
+          <!-- Original set of logos -->
+          <div class="client-logo">
+              <img src="assets/img/logosImages/scieAndInov.jpeg" class="img-fluid" alt="">
+          </div>
+          <div class="client-logo">
+              <img src="assets/img/logosImages/shudu2Logo.jpeg" class="img-fluid" alt="">
+          </div>
+          <div class="client-logo">
+              <img src="assets/img/logosImages/inovationLogo.jpeg" class="img-fluid" alt="">
+          </div>
+          <div class="client-logo">
+              <img src="assets/img/logosImages/upLogo.jpeg" class="img-fluid" alt="">
+          </div>
+          <div class="client-logo">
+              <img src="assets/img/logosImages/sedaLogo.jpeg" class="img-fluid" alt="">
+          </div>
+          <div class="client-logo">
+              <img src="assets/img/logosImages/Ozow-Logo-Colour.png" class="img-fluid" alt="">
+          </div>
+          <div class="client-logo">
+              <img src="assets/img/logosImages/tiaLogo.jpeg" class="img-fluid" alt="">
+          </div>
 
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/logosImages/shudu2Logo.jpeg" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/logosImages/inovationLogo.jpeg" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/logosImages/upLogo.jpeg" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/logosImages/sedaLogo.jpeg" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/logosImages/tiaLogo.jpeg" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-        </div>
+        </div> 
       </div>
     </section><!-- /Clients Section -->
+
 
   </main>
 
@@ -331,6 +332,30 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
+  <script>
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+        items: 6,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        loop: true,
+        responsive: {
+          0: { items: 2 },
+          600: { items: 3 },
+          1000: { items: 6 }
+        }
+      });
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -346,4 +371,5 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
