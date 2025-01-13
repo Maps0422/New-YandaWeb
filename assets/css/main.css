@@ -54,8 +54,13 @@
 
 .whatsapp-icon {
   position: fixed;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   bottom: 100px;
   right: 18px;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Match width for a perfect circle */
   background-color: #25d366;
   /* WhatsApp green background */
   padding: 10px;
