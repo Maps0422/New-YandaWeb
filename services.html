@@ -1,345 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Services - Yanda</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Services - Yanda</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <!-- Favicons -->
+    <link href="assets/img/yandapic2.jpeg" rel="icon" />
+    <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
 
-  <!-- Favicons -->
-  <link href="assets/img/yandapic2.jpeg" rel="icon">
-  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <body class="services-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img
+            src="assets/img/yandapic2.jpeg"
+            alt="Logo"
+            class="img-fluid me-2"
+            style="max-height: 110px"
+          />
 
+          <h1 class="sitename">Yanda</h1>
+        </a>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="about.html"
+                ><span>About</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="testimonials.html">Testimonials</a></li>
+              </ul>
+            </li>
+            <li><a href="services.html" class="active">Services</a></li>
 
+            <li><a href="blog.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <a class="btn-getstarted" href="starter-page.html">Apply</a>
+      </div>
+    </header>
 
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title light-background">
+        <div
+          class="container d-lg-flex justify-content-between align-items-center"
+        >
+          <h1 class="mb-2 mb-lg-0">Services</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="current">Services</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-briefcase icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link"
+                      >Mentorship and Guidance:</a
+                    >
+                  </h4>
+                  <p class="description">
+                    Experienced mentors and advisors provide guidance on various
+                    aspects of business development, including strategy,
+                    marketing, finance, and operations. Networking
+                    Opportunities: Access to a network of entrepreneurs,
+                    investors, industry experts, and potential partners can help
+                    startups expand their professional connections and
+                    collaborations.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Item -->
 
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link">Access to Funding:</a>
+                  </h4>
+                  <p class="description">
+                    Incubators often provide access to funding sources such as
+                    angel investors, venture capital firms, grants, and other
+                    financing options to help startups secure the capital they
+                    need to grow. Workspace and Infrastructure: Many incubators
+                    offer affordable office space, co-working spaces,
+                    laboratories, or production facilities equipped with
+                    essential amenities and resources.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Item -->
 
-</head>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-bar-chart icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="" class="stretched-link"
+                      >Business Development Support:</a
+                    >
+                  </h4>
+                  <p class="description">
+                    Software & App Development Assistance – Providing guidance
+                    on building tech solutions. Hardware & Prototyping
+                    Facilities – Access to 3D printing, IoT labs, Testing and
+                    prototyping tools. Cloud Computing & AI Resources – Support
+                    in implementing cloud-based and AI-driven solutions.
+                    Cybersecurity Awareness & Protection – Training on securing
+                    digital assets and protecting customer data. Tech Research &
+                    Development (R&D) – Assistance with product innovation and
+                    emerging technologies. -Commercialization Support
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Item -->
 
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-binoculars icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link"
+                      >Legal and Administrative Support:</a
+                    >
+                  </h4>
+                  <p class="description">
+                    Help with legal and administrative matters such as company
+                    registration, intellectual property protection, contracts,
+                    compliance, and regulatory requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Item -->
 
-<body class="services-page">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-brightness-high icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link"
+                      >Training and Workshops:</a
+                    >
+                  </h4>
+                  <p class="description">
+                    Training sessions, workshops, seminars, and educational
+                    programs covering various business topics to enhance the
+                    skills and knowledge of startup founders and teams.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Item -->
 
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-calendar4-week icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link"
+                      >Incubator Events and Pitch Opportunities:</a
+                    >
+                  </h4>
+                  <p class="description">
+                    Events like demo days, pitch competitions, investor
+                    meetings, and industry conferences organized by incubators
+                    provide startups with visibility, feedback, and potential
+                    investment opportunities.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Item -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-calendar4-week icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link"
+                      >Community and Peer Support:</a
+                    >
+                  </h4>
+                  <p class="description">
+                    Being part of an incubator community offers startups the
+                    chance to interact with peers facing similar challenges,
+                    share experiences, collaborate on projects, and gain
+                    emotional support.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Item -->
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-laptop icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link"
+                      >Digital Skills Academy</a
+                    >
+                  </h4>
+                  <p class="description">
+                    Cutting-edge ICT & Digital Training programs. Cybersecurity,
+                    AI, and Software Development courses. Industry-aligned
+                    certification programmes. Tech-driven entrepreneurship and
+                    business innovation training.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-building icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link"
+                      >Co-Working & Infrastructure Support</a
+                    >
+                  </h4>
+                  <p class="description">
+                    Affordable office space and shared workstations. High-speed
+                    internet and digital tools access. Conference facilities and
+                    equipped boardrooms. Creative innovation hub for
+                    collaborative ideation.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-rocket-takeoff icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link"
+                      >SME & Startup Acceleration Programmes</a
+                    >
+                  </h4>
+                  <p class="description">
+                    Tailored incubation programmes for startup growth.
+                    Tech-Based SME Support for digital transformation.
+                    Specialized programmes for Women & Youth in ICT empowerment.
+                    Market access and scaling strategies.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-award icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link"
+                      >Quality Standard-Related Business Interventions</a
+                    >
+                  </h4>
+                  <p class="description">
+                    Implementation of Quality Management Systems (QMS). Product
+                    and Service Standardization. Process Optimization and
+                    Digital Transformation. Compliance with industry standards
+                    and certifications.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-award icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link"
+                      >3D Animation & Graphics</a
+                    >
+                  </h4>
+                  <p class="description">
+                   Advanced 3D modeling and animation solutions for tech-driven applications, including product simulations, UI/UX visualizations, and immersive digital storytelling. Designed to enhance user engagement and innovation.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-award icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link">3D Printing Services</a>
+                  </h4>
+                  <ul class="description">
+                    <li>Prototyping and Product Development.</li>
+                    <li>Custom Manufacturing.</li>
+                    <li>Design & Consultation Services.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
+           <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-item d-flex position-relative h-100">
+                <i class="bi bi-award icon flex-shrink-0"></i>
+                <div>
+                  <h4 class="title">
+                    <a href="#" class="stretched-link">3D Printing Services</a>
+                  </h4>
+                  <ul class="description">
+                    <li>3D Scanning and Reverse Engineering.</li>
+                    <li>3D Printing for Art and Architecture.</li>
+                    <li>3D Printing Maintenance and Repair.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+    </main>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/yandapic2.jpeg" alt="Logo" class="img-fluid me-2" style="max-height: 110px;">
+    <footer id="footer" class="footer dark-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Contact Us</span>
+            </a>
 
+            <p class="mt-3">
+              <strong>Phone:</strong> <span> 012 844 0048</span>
+            </p>
+            <p><strong>Email:</strong> <span> info@yandacie.co.za</span></p>
+            <p>
+              <strong>Address:</strong><br />
+              <span
+                >309-Js, Elandsfontein,<br />
+                1449, eMalahleni, <br />
+                1035</span
+              >
+            </p>
 
-        <h1 class="sitename">Yanda</h1>
+            <div class="social-links d-flex mt-4">
+              <a href="https://x.com/yandabdste_cent?s=11"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/yanda_cie?igsh=MWxpbGJoaXV5MzhjYg=="
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/yanda-centre-of-innovation-and-entrepreneurship-335560305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="blog.html">News</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="services.html">Mentorship and Guidance</a></li>
+              <li><a href="services.html">Access to Funding</a></li>
+              <li><a href="services.html">Business Development Support</a></li>
+              <li>
+                <a href="services.html">Legal and Administrative Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <img
+              src="assets/img/yandapic2.jpeg"
+              alt="Logo"
+              class="img-fluid me-2"
+              style="max-height: 200px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="https://wa.me/+27720592374"
+        class="whatsapp-icon"
+        target="_blank"
+      >
+        <i class="fab fa-whatsapp icon"></i>
       </a>
 
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="testimonials.html">Testimonials</a></li>
-             
-            </ul>
-          </li>
-          <li><a href="services.html" class="active">Services</a></li>
-         
-         
-          <li><a href="blog.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-
-      <a class="btn-getstarted" href="starter-page.html">Apply</a>
-
-
-    </div>
-  </header>
-
-
-  <main class="main">
-
-
-    <!-- Page Title -->
-    <div class="page-title light-background">
-      <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Services</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Services</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-      <div class="container">
-        <div class="row gy-4">
-
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-briefcase icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link" >Mentorship and Guidance:</a></h4>
-                <p class="description">Experienced mentors and advisors provide guidance on various aspects of business development,
-                   including strategy, marketing, finance, and operations.
-                    Networking Opportunities: Access to a network of entrepreneurs, investors, industry experts, and potential partners can help startups expand their professional connections and collaborations.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-card-checklist icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Access to Funding:</a></h4>
-                <p class="description">Incubators often provide access to funding sources such as angel investors, venture capital firms, grants, and other financing options to help startups secure the capital they need to grow. Workspace and Infrastructure: Many incubators offer affordable office space, co-working spaces,
-                  laboratories, or production facilities equipped with essential amenities and resources.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-bar-chart icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="" class="stretched-link">Business Development Support:</a></h4>
-                <p class="description">Software & App Development Assistance – Providing guidance on building tech solutions.
-                  Hardware & Prototyping Facilities – Access to 3D printing, IoT labs, Testing and prototyping tools.
-                  Cloud Computing & AI Resources – Support in implementing cloud-based and AI-driven solutions.
-                  Cybersecurity Awareness & Protection – Training on securing digital assets and protecting customer data.
-                  Tech Research & Development (R&D) – Assistance with product innovation and emerging technologies.
-                  -Commercialization Support</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-binoculars icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Legal and Administrative Support:</a></h4>
-                <p class="description">Help with legal and administrative matters such as company registration,
-                   intellectual property protection, contracts, compliance, and regulatory requirements.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500" >
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-brightness-high icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Training and Workshops:</a></h4>
-                <p class="description">Training sessions, workshops, seminars, and educational
-                  programs covering various business topics to enhance the skills and knowledge of startup founders and teams.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-calendar4-week icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Incubator Events and Pitch Opportunities:</a></h4>
-                <p class="description">Events like demo days, pitch competitions, investor meetings,
-                   and industry conferences organized by incubators provide startups with visibility, feedback, and potential investment opportunities.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-calendar4-week icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Community and Peer Support:</a></h4>
-                <p class="description">Being part of an incubator community offers startups the chance to interact with peers facing similar
-                   challenges, share experiences, collaborate on projects, and gain emotional support.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-laptop icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Digital Skills Academy</a></h4>
-                <p class="description">Cutting-edge ICT & Digital Training programs. Cybersecurity, AI, and Software Development courses.
-                Industry-aligned certification programmes. Tech-driven entrepreneurship and business innovation training.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-building icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Co-Working & Infrastructure Support</a></h4>
-                <p class="description">Affordable office space and shared workstations. High-speed internet and digital tools access.
-                Conference facilities and equipped boardrooms. Creative innovation hub for collaborative ideation.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-rocket-takeoff icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">SME & Startup Acceleration Programmes</a></h4>
-                <p class="description">Tailored incubation programmes for startup growth. Tech-Based SME Support for digital transformation.
-                Specialized programmes for Women & Youth in ICT empowerment. Market access and scaling strategies.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-award icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Quality Standard-Related Business Interventions</a></h4>
-                <p class="description">Implementation of Quality Management Systems (QMS). Product and Service Standardization.
-                Process Optimization and Digital Transformation. Compliance with industry standards and certifications.</p>
-              </div>
-            </div>
-          </div>
-
-
+      <div class="container copyright text-center mt-4">
+        <p>© <span>Copyright</span> Yanda <span>All Rights Reserved</span></p>
+        <div class="credits">
+          Designed by
+          <a href="https://www.shuduconnections.com/">Shudu Connections</a>
         </div>
       </div>
-    </section><!-- /Services Section -->
-  </main>
+    </footer>
 
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <footer id="footer" class="footer dark-background">
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Contact Us</span>
-          </a>
-         
-          <p class="mt-3"><strong>Phone:</strong> <span> 012 844 0048</span></p>
-          <p><strong>Email:</strong> <span> info@yandacie.co.za</span></p>
-          <p><strong>Address:</strong><br>
-          <span>309-Js, Elandsfontein,<br>
-          1449, eMalahleni, <br>
-          1035</span></p>
-         
-          <div class="social-links d-flex mt-4">
-            <a href="https://x.com/yandabdste_cent?s=11"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.instagram.com/yanda_cie?igsh=MWxpbGJoaXV5MzhjYg=="><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/yanda-centre-of-innovation-and-entrepreneurship-335560305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="blog.html">News</a></li>
-          </ul>
-        </div>
-
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="services.html">Mentorship and Guidance</a></li>
-            <li><a href="services.html">Access to Funding</a></li>
-            <li><a href="services.html">Business Development Support</a></li>
-            <li><a href="services.html">Legal and Administrative Support</a></li>
-          </ul>
-        </div>
-
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-            <img src="assets/img/yandapic2.jpeg" alt="Logo" class="img-fluid me-2" style="max-height: 200px;">
- 
-          </div>
-
-
-      </div>
-    </div>
-
-
-    <a href="https://wa.me/+27720592374" class="whatsapp-icon" target="_blank">
-      <i class="fab fa-whatsapp icon"></i>
-    </a>
-
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> Yanda <span>All Rights Reserved</span></p>
-      <div class="credits">
-        Designed by <a href="https://www.shuduconnections.com/">Shudu Connections</a>
-      </div>
-    </div>
-
-
-  </footer>
-
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-
-</body>
-
-
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
- 
-
