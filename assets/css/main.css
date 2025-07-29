@@ -40,9 +40,10 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f2f4f6;
-  --surface-color: #ffffff;
+    background: none !important;
+    background-color: transparent !important;
 }
+
 
 .dark-background {
   --background-color: #3b4654;
@@ -1062,8 +1063,7 @@ section,
   padding: 20px 40px;
   max-width: 90%;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.5;
-  filter: grayscale(100%);
+ 
 }
 
 @keyframes slide {
@@ -1110,8 +1110,7 @@ section,
   padding: 20px 40px;
   max-width: 90%;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.5;
-  filter: grayscale(100%);
+ 
 }
 
 .clients .client-logo img:hover {
@@ -2630,3 +2629,306 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/* Accessibility Features CSS */
+
+/* FIXED ACCESSIBILITY MENU STYLES */
+        .accessibility-menu {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10000; /* Higher than WhatsApp button */
+        }
+
+        .accessibility-toggle {
+            background: #007bff;
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .accessibility-toggle:hover {
+            background: #0056b3;
+            transform: scale(1.1);
+        }
+
+        .accessibility-toggle:focus {
+            outline: 3px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        .accessibility-options {
+            position: absolute;
+            right: 70px;
+            top: 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            padding: 15px;
+            min-width: 280px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(20px);
+            transition: all 0.3s ease;
+            border: 1px solid #ddd;
+            z-index: 10001;
+        }
+
+        .accessibility-options.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .accessibility-options h6 {
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #333;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .accessibility-option {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            margin: 5px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .accessibility-option:hover {
+            background: #f8f9fa;
+        }
+
+        .accessibility-option:focus {
+            background: #e3f2fd;
+            outline: 2px solid #007bff;
+            outline-offset: 1px;
+        }
+
+        .accessibility-option.active {
+            background: #e3f2fd;
+            color: #1976d2;
+            font-weight: 500;
+        }
+
+        .accessibility-option i {
+            margin-right: 12px;
+            width: 20px;
+            text-align: center;
+            font-size: 16px;
+            color: #007bff;
+        }
+
+        .accessibility-option.active i {
+            color: #1976d2;
+        }
+
+        /* TTS Controls */
+        .tts-controls {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .tts-controls h6 {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .tts-button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin: 2px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tts-button:hover {
+            background: #218838;
+            transform: translateY(-1px);
+        }
+
+        .tts-button:focus {
+            outline: 2px solid #ffffff;
+            outline-offset: 1px;
+        }
+
+        .tts-button.active {
+            background: #dc3545;
+        }
+
+        .tts-button.active:hover {
+            background: #c82333;
+        }
+
+        .tts-speed-control {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tts-speed-control label {
+            font-size: 12px;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .tts-speed-control input[type="range"] {
+            flex: 1;
+            max-width: 120px;
+        }
+
+        /* Reset button styling */
+        .accessibility-option.reset-button {
+            margin-top: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            color: #dc3545;
+        }
+
+        .accessibility-option.reset-button:hover {
+            background: #fff5f5;
+            color: #c82333;
+        }
+
+        .accessibility-option.reset-button i {
+            color: #dc3545;
+        }
+
+        /* Accessibility states */
+        body.high-contrast {
+            filter: contrast(150%) brightness(1.1);
+        }
+
+        body.high-contrast * {
+            text-shadow: none !important;
+            box-shadow: none !important;
+        }
+
+        body.large-text {
+            font-size: 1.2em !important;
+        }
+
+        body.large-text * {
+            font-size: inherit !important;
+            line-height: 1.5 !important;
+        }
+
+        body.large-text h1 { font-size: 2.4em !important; }
+        body.large-text h2 { font-size: 2.0em !important; }
+        body.large-text h3 { font-size: 1.8em !important; }
+
+        body.enhanced-focus *:focus {
+            outline: 3px solid #007bff !important;
+            outline-offset: 2px !important;
+            background-color: rgba(0, 123, 255, 0.1) !important;
+        }
+
+        .text-highlight {
+            background-color: #ffeb3b !important;
+            color: #000 !important;
+            padding: 2px 4px;
+            border-radius: 3px;
+            outline: 2px solid #ffc107 !important;
+            outline-offset: 1px;
+            transition: all 0.3s ease;
+        }
+
+        body.reading-mode {
+            background: #f5f5f5 !important;
+        }
+
+        body.reading-mode *:not(.accessibility-menu):not(.accessibility-toggle):not(.accessibility-options):not(.accessibility-option) {
+            background: transparent !important;
+            color: #333 !important;
+        }
+
+        body.no-animations *,
+        body.no-animations *::before,
+        body.no-animations *::after {
+            animation-duration: 0s !important;
+            animation-delay: 0s !important;
+            transition-duration: 0s !important;
+            transition-delay: 0s !important;
+        }
+
+        /* Screen reader only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .accessibility-menu {
+                right: 10px;
+            }
+            
+            .accessibility-toggle {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .accessibility-options {
+                right: 60px;
+                min-width: 250px;
+                font-size: 13px;
+            }
+        }
+
+        /* High contrast mode improvements */
+        body.high-contrast .accessibility-toggle {
+            background: #000;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        body.high-contrast .accessibility-options {
+            background: #fff;
+            border: 2px solid #000;
+            color: #000;
+        }
+
+        body.high-contrast .accessibility-option:hover {
+            background: #000;
+            color: #fff;
+        }

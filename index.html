@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
- <!-- Main JS File -->
- <script src="assets/js/main.js"></script>
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -13,10 +11,8 @@
 
   <!-- Favicons -->
   <link href="assets/img/yandapic22.jpg" rel="icon">
-  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="path/to/owl.theme.default.min.css"> -->
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -34,18 +30,228 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Accessibility Features CSS -->
+  <!-- <style>
+    /* Accessibility floating menu */
+    .accessibility-menu {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 9999;
+    }
+
+    .accessibility-toggle {
+      background: #007bff;
+      color: white;
+      border: none;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .accessibility-toggle:hover {
+      background: #0056b3;
+      transform: scale(1.1);
+    }
+
+    .accessibility-options {
+      position: absolute;
+      right: 70px;
+      top: 0;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      padding: 15px;
+      min-width: 250px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(20px);
+      transition: all 0.3s ease;
+    }
+
+    .accessibility-options.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    .accessibility-option {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      margin: 5px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+    }
+
+    .accessibility-option:hover {
+      background: #f8f9fa;
+    }
+
+    .accessibility-option.active {
+      background: #e3f2fd;
+      color: #1976d2;
+    }
+
+    .accessibility-option i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+
+    /* High contrast mode */
+    body.high-contrast {
+      filter: contrast(150%);
+    }
+
+    /* Large text mode */
+    body.large-text {
+      font-size: 1.2em !important;
+    }
+
+    body.large-text * {
+      font-size: inherit !important;
+    }
+
+    /* Focus indicators */
+    body.enhanced-focus *:focus {
+      outline: 3px solid #007bff !important;
+      outline-offset: 2px !important;
+    }
+
+    /* Text reader highlight */
+    .text-highlight {
+      background-color: #ffeb3b !important;
+      color: #000 !important;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    /* Reading mode */
+    body.reading-mode {
+      background: #f5f5f5 !important;
+    }
+
+    body.reading-mode * {
+      background: transparent !important;
+      color: #333 !important;
+    }
+
+    body.reading-mode .hero,
+    body.reading-mode .dark-background {
+      background: #f5f5f5 !important;
+      color: #333 !important;
+    }
+
+    /* Pause animations */
+    body.no-animations * {
+      animation-duration: 0s !important;
+      transition-duration: 0s !important;
+    }
+
+    .tts-controls {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+    }
+
+    .tts-button {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin: 2px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .tts-button:hover {
+      background: #218838;
+    }
+
+    .tts-button.active {
+      background: #dc3545;
+    }
+  </style> -->
 </head>
 
 <body class="index-page">
+
+  <!-- Accessibility Menu -->
+  <div class="accessibility-menu">
+    <button class="accessibility-toggle" id="accessibilityToggle" aria-label="Accessibility Options">
+      <i class="fas fa-universal-access"></i>
+    </button>
+    
+    <div class="accessibility-options" id="accessibilityOptions">
+      <h6 style="margin-bottom: 15px; font-weight: bold; color: #333;">Accessibility Options</h6>
+      
+      <button class="accessibility-option" id="highContrast">
+        <i class="fas fa-adjust"></i>
+        High Contrast
+      </button>
+      
+      <button class="accessibility-option" id="largeText">
+        <i class="fas fa-font"></i>
+        Large Text
+      </button>
+      
+      <button class="accessibility-option" id="enhancedFocus">
+        <i class="fas fa-crosshairs"></i>
+        Enhanced Focus
+      </button>
+      
+      
+      
+      <button class="accessibility-option" id="pauseAnimations">
+        <i class="fas fa-pause"></i>
+        Pause Animations
+      </button>
+
+      <div class="tts-controls">
+        <h6 style="margin-bottom: 10px; font-weight: bold; color: #333;">Text-to-Speech</h6>
+        <button class="tts-button" id="startTTS">
+          <i class="fas fa-play"></i> Start Reading
+        </button>
+        <button class="tts-button" id="pauseTTS">
+          <i class="fas fa-pause"></i> Pause
+        </button>
+        <button class="tts-button" id="stopTTS">
+          <i class="fas fa-stop"></i> Stop
+        </button>
+        <div style="margin-top: 8px;">
+          <label style="font-size: 12px; color: #666;">Speed:</label>
+          <input type="range" id="speechRate" min="0.5" max="2" step="0.1" value="1" style="width: 100px; margin-left: 5px;">
+        </div>
+      </div>
+      
+      <button class="accessibility-option" id="resetAll" style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 15px;">
+        <i class="fas fa-undo"></i>
+        Reset All
+      </button>
+    </div>
+  </div>
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/yandapic2.png" alt="Logo" class="img-fluid me-2" style="max-height: 120px;">
-
-        <!-- <h1 class="sitename">Yanda</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -83,7 +289,7 @@
             <p></p>
             <a href="index.html" class="btn-get-started">Apply</a>
           </div>
-        </div><!-- End Carousel Item -->
+        </div>
 
         <div class="carousel-item">
           <img src="assets/img/homepic2.JPG" alt="">
@@ -92,7 +298,7 @@
             <p></p>
             <a href="index.html" class="btn-get-started">Apply</a>
           </div>
-        </div><!-- End Carousel Item -->
+        </div>
 
         <div class="carousel-item">
           <img src="assets/img/homepic3.JPG" alt="">
@@ -101,7 +307,7 @@
             <p></p>
             <a href="index.html" class="btn-get-started">Apply</a>
           </div>
-        </div><!-- End Carousel Item -->
+        </div>
 
          <div class="carousel-item">
           <img src="assets/img/homepic4.jpg" alt="">
@@ -110,7 +316,7 @@
             <p></p>
             <a href="index.html" class="btn-get-started">Apply</a>
           </div>
-        </div><!-- End Carousel Item -->
+        </div>
 
         <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
@@ -124,16 +330,15 @@
 
       </div>
 
-    </section><!-- /Hero Section -->
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about section">
 
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
         <p>About Us<br></p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container-fluid">
         <div class="row justify-content-center">
@@ -152,7 +357,7 @@
     </div>
       
 
-    </section><!-- /About Section -->
+    </section>
 
     <section id="services" class="services section">
       <div class="container">
@@ -233,91 +438,50 @@
     </section>
 
  <!-- Clients Section -->
+  
  <section id="clients" class="clients section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2></h2>
+    <p>Our Clients & Partners<br></p>
+  </div>
   <div class="container">
-      <div class="logo-container">
-        
-          <!-- Original set of logos -->
-          <div class="client-logo">
-              <img src="assets/img/DSTI logo 1.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="client-logo">
-              <img src="assets/img/shudu2Logo.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="client-logo">
-              <img src="assets/img/inovationLogo.jpeg" class="img-fluid" alt="">
-
-          </div>
-          <div class="client-logo">
-              <img src="assets/img/vendor-11.jpg" class="img-fluid" alt="">
-              
-          </div>
-          <div class="client-logo">
-              <img src="assets/img/upLogo.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="client-logo">
-            <img src="assets/img/vendor-14.jpg" class="img-fluid" alt="">
-        </div>
-          <div class="client-logo">
-            <img src="assets/img/chieta.jpeg" class="img-fluid" alt="">
-        </div>
-          <div class="client-logo">
-              <img src="assets/img/sefda.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="client-logo">
-              <img src="assets/img/Ozow-Logo-Colour.png" class="img-fluid" alt="">
-          </div>
-          <div class="client-logo">
-              <img src="assets/img/new tia.jpg" class="img-fluid" alt="">
-          </div>
-
-
-          
-          <div class="client-logo">
-            <img src="" class="img-fluid" alt="">
-        </div>
-          <!-- Original set of logos -->
-          <div class="client-logo">
-            <img src="assets/img/DSTI logo 1.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="client-logo">
-            <img src="assets/img/shudu2Logo.jpeg" class="img-fluid" alt="">
-        </div>
-        <div class="client-logo">
-            <img src="assets/img/inovationLogo.jpeg" class="img-fluid" alt="">
-        </div>
-        <div class="client-logo">
-              <img src="assets/img/vendor-11.jpg" class="img-fluid" alt="">
-              
-          </div>
-        <div class="client-logo">
-            <img src="assets/img/upLogo.jpeg" class="img-fluid" alt="">
-        </div>
-        <div class="client-logo">
-          <img src="assets/img/vendor-14.jpg" class="img-fluid" alt="">
+    <div class="logo-container">
+      <div class="client-logo">
+        <img src="assets/img/DSTI logo 1.jpg" class="img-fluid" alt="">
       </div>
-        <div class="client-logo">
-          <img src="assets/img/chieta.jpeg" class="img-fluid" alt="">
+      <div class="client-logo">
+        <img src="assets/img/shudu2Logo.png" class="img-fluid" alt="">
       </div>
-        <div class="client-logo">
-            <img src="assets/img/sefda.jpeg" class="img-fluid" alt="">
-        </div>
-        <div class="client-logo">
-            <img src="assets/img/Ozow-Logo-Colour.png" class="img-fluid" alt="">
-        </div>
-        <div class="client-logo">
-            <img src="assets/img/new tia.jpg" class="img-fluid" alt="">
-        </div>
-        
-        </div> 
-        
-        
-          
-
-        
+      <div class="client-logo">
+        <img src="assets/img/inovationLogo.png" class="img-fluid" alt="">
       </div>
-    </section><!-- /Clients Section -->
-
+      <div class="client-logo">
+        <img src="assets/img/vendor-11.jpg" class="img-fluid" alt="">
+      </div>
+      <div class="client-logo">
+        <img src="assets/img/upLogo.jpeg" class="img-fluid" alt="">
+      </div>
+      <div class="client-logo">
+        <img src="assets/img/vendor-14.jpg" class="img-fluid" alt="">
+      </div>
+      <div class="client-logo">
+        <img src="assets/img/chieta.jpeg" class="img-fluid" alt="">
+      </div>
+      <div class="client-logo">
+        <img src="assets/img/sefda.png" class="img-fluid" alt="">
+      </div>
+      <div class="client-logo">
+        <img src="assets/img/Ozow-Logo-Colour.png" class="img-fluid" alt="">
+      </div>
+      <div class="client-logo">
+        <img src="assets/img/new tia.jpg" class="img-fluid" alt="">
+      </div>
+      <div class="client-logo">
+        <img src="assets/img/afriLabs.png" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+</section>
 
   </main>
 
@@ -390,40 +554,260 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <script>
-    $(document).ready(function(){
-      $(".owl-carousel").owlCarousel({
-        items: 6,
-        nav: true,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        loop: true,
-        responsive: {
-          0: { items: 2 },
-          600: { items: 3 },
-          1000: { items: 6 }
+  <!-- <script>
+    // Accessibility Menu JavaScript
+    document.addEventListener("DOMContentLoaded", function() {
+      const accessibilityToggle = document.getElementById('accessibilityToggle');
+      const accessibilityOptions = document.getElementById('accessibilityOptions');
+      
+      // Text-to-Speech variables
+      let speechSynthesis = window.speechSynthesis;
+      let currentUtterance = null;
+      let isReading = false;
+      let currentElement = null;
+
+      // Toggle accessibility menu
+      accessibilityToggle.addEventListener('click', function() {
+        accessibilityOptions.classList.toggle('active');
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.accessibility-menu')) {
+          accessibilityOptions.classList.remove('active');
+        }
+      });
+
+      // High Contrast
+      document.getElementById('highContrast').addEventListener('click', function() {
+        document.body.classList.toggle('high-contrast');
+        this.classList.toggle('active');
+      });
+
+      // Large Text
+      document.getElementById('largeText').addEventListener('click', function() {
+        document.body.classList.toggle('large-text');
+        this.classList.toggle('active');
+      });
+
+      // Enhanced Focus
+      document.getElementById('enhancedFocus').addEventListener('click', function() {
+        document.body.classList.toggle('enhanced-focus');
+        this.classList.toggle('active');
+      });
+
+      // Reading Mode
+      document.getElementById('readingMode').addEventListener('click', function() {
+        document.body.classList.toggle('reading-mode');
+        this.classList.toggle('active');
+      });
+
+      // Pause Animations
+      document.getElementById('pauseAnimations').addEventListener('click', function() {
+        document.body.classList.toggle('no-animations');
+        this.classList.toggle('active');
+      });
+
+      // Text-to-Speech Functions
+      function getReadableText() {
+        const mainContent = document.querySelector('main');
+        const textContent = [];
+        
+        // Get headings and paragraphs
+        const elements = mainContent.querySelectorAll('h1, h2, h3, h4, h5, h6, p, a, span, div');
+        
+        elements.forEach(element => {
+          const text = element.textContent.trim();
+          if (text && text.length > 5 && !element.querySelector('h1, h2, h3, h4, h5, h6, p')) {
+            textContent.push({
+              element: element,
+              text: text
+            });
+          }
+        });
+        
+        return textContent;
+      }
+
+      function highlightElement(element) {
+        // Remove previous highlights
+        document.querySelectorAll('.text-highlight').forEach(el => {
+          el.classList.remove('text-highlight');
+        });
+        
+        // Add highlight to current element
+        if (element) {
+          element.classList.add('text-highlight');
+          // Scroll to element
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      // Start TTS
+      document.getElementById('startTTS').addEventListener('click', function() {
+        if (isReading) {
+          speechSynthesis.resume();
+          this.innerHTML = '<i class="fas fa-play"></i> Start Reading';
+          return;
+        }
+
+        const readableContent = getReadableText();
+        if (readableContent.length === 0) return;
+
+        isReading = true;
+        this.innerHTML = '<i class="fas fa-pause"></i> Reading...';
+        this.classList.add('active');
+
+        let currentIndex = 0;
+
+        function readNext() {
+          if (currentIndex >= readableContent.length || !isReading) {
+            isReading = false;
+            document.getElementById('startTTS').innerHTML = '<i class="fas fa-play"></i> Start Reading';
+            document.getElementById('startTTS').classList.remove('active');
+            document.querySelectorAll('.text-highlight').forEach(el => {
+              el.classList.remove('text-highlight');
+            });
+            return;
+          }
+
+          const item = readableContent[currentIndex];
+          highlightElement(item.element);
+
+          currentUtterance = new SpeechSynthesisUtterance(item.text);
+          currentUtterance.rate = document.getElementById('speechRate').value;
+          currentUtterance.pitch = 1;
+          currentUtterance.volume = 1;
+
+          currentUtterance.onend = function() {
+            currentIndex++;
+            setTimeout(readNext, 200); // Small delay between sentences
+          };
+
+          currentUtterance.onerror = function() {
+            currentIndex++;
+            readNext();
+          };
+
+          speechSynthesis.speak(currentUtterance);
+        }
+
+        readNext();
+      });
+
+      // Pause TTS
+      document.getElementById('pauseTTS').addEventListener('click', function() {
+        if (speechSynthesis.speaking && !speechSynthesis.paused) {
+          speechSynthesis.pause();
+        } else if (speechSynthesis.paused) {
+          speechSynthesis.resume();
+        }
+      });
+
+      // Stop TTS
+      document.getElementById('stopTTS').addEventListener('click', function() {
+        speechSynthesis.cancel();
+        isReading = false;
+        document.getElementById('startTTS').innerHTML = '<i class="fas fa-play"></i> Start Reading';
+        document.getElementById('startTTS').classList.remove('active');
+        document.querySelectorAll('.text-highlight').forEach(el => {
+          el.classList.remove('text-highlight');
+        });
+      });
+
+      // Reset All
+      document.getElementById('resetAll').addEventListener('click', function() {
+        document.body.classList.remove('high-contrast', 'large-text', 'enhanced-focus', 'reading-mode', 'no-animations');
+        document.querySelectorAll('.accessibility-option').forEach(option => {
+          option.classList.remove('active');
+        });
+        speechSynthesis.cancel();
+        isReading = false;
+        document.getElementById('startTTS').innerHTML = '<i class="fas fa-play"></i> Start Reading';
+        document.getElementById('startTTS').classList.remove('active');
+        document.querySelectorAll('.text-highlight').forEach(el => {
+          el.classList.remove('text-highlight');
+        });
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        // Alt + A to toggle accessibility menu
+        if (e.altKey && e.key === 'a') {
+          e.preventDefault();
+          accessibilityOptions.classList.toggle('active');
+        }
+        
+        // Alt + R to start/stop reading
+        if (e.altKey && e.key === 'r') {
+          e.preventDefault();
+          document.getElementById('startTTS').click();
+        }
+        
+        // Alt + S to stop reading
+        if (e.altKey && e.key === 's') {
+          e.preventDefault();
+          document.getElementById('stopTTS').click();
+        }
+      });
+
+      // Original header scroll functionality
+      const header = document.querySelector('#header');
+      
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+      
+      // Check on page load as well
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      }
+
+      // Add click-to-read functionality for individual elements
+      document.addEventListener('click', function(e) {
+        // Only if holding Alt key
+        if (e.altKey) {
+          e.preventDefault();
+          const text = e.target.textContent.trim();
+          if (text && text.length > 0) {
+            speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.rate = document.getElementById('speechRate').value;
+            speechSynthesis.speak(utterance);
+            
+            // Highlight the clicked element temporarily
+            e.target.classList.add('text-highlight');
+            setTimeout(() => {
+              e.target.classList.remove('text-highlight');
+            }, 2000);
+          }
         }
       });
     });
 
-  document.addEventListener("DOMContentLoaded", function() {
-  const header = document.querySelector('#header');
-  
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
-  
-  // Check on page load as well
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  }
-});
-  </script>
+    // Owl Carousel initialization
+    $(document).ready(function(){
+      if (typeof $.fn.owlCarousel !== 'undefined') {
+        $(".owl-carousel").owlCarousel({
+          items: 6,
+          nav: true,
+          dots: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          loop: true,
+          responsive: {
+            0: { items: 2 },
+            600: { items: 3 },
+            1000: { items: 6 }
+          }
+        });
+      }
+    });
+  </script> -->
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
