@@ -2932,3 +2932,145 @@ section,
             background: #000;
             color: #fff;
         }
+
+        /* Accessibility Menu Scroll Fix */
+.accessibility-options {
+  /* Set a maximum height to prevent the menu from extending beyond the viewport */
+  max-height: 70vh; /* 70% of viewport height - adjust as needed */
+  
+  /* Enable vertical scrolling when content exceeds max-height */
+  overflow-y: auto;
+  
+  /* Ensure horizontal content doesn't overflow */
+  overflow-x: hidden;
+  
+  /* Add some padding to prevent content from touching the scrollbar */
+  padding-right: 8px;
+  
+  /* Smooth scrolling behavior */
+  scroll-behavior: smooth;
+}
+
+/* Optional: Custom scrollbar styling for better appearance */
+.accessibility-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.accessibility-options::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.accessibility-options::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.accessibility-options::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* For Firefox scrollbar styling */
+.accessibility-options {
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+
+
+/* Mobile and tablet responsive adjustments */
+@media screen and (max-width: 768px) {
+  .accessibility-options {
+    /* Mobile screens - account for smaller viewport and touch interfaces */
+    max-height: 60vh;
+    
+    /* Better touch scrolling on mobile */
+    -webkit-overflow-scrolling: touch;
+    
+    /* Ensure menu doesn't cover too much screen real estate on mobile */
+    max-width: 90vw;
+  }
+  
+  /* Larger touch target for mobile scrollbar */
+  .accessibility-options::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .accessibility-options {
+    /* Small mobile screens */
+    max-height: 55vh;
+    
+    /* Ensure content is easily readable */
+    font-size: 14px;
+    
+    /* Better spacing for touch interfaces */
+    padding: 12px;
+  }
+  
+  .accessibility-option {
+    /* Larger touch targets for mobile */
+    padding: 12px 16px;
+    margin-bottom: 8px;
+  }
+  
+  .tts-controls {
+    /* Stack TTS controls better on small screens */
+    margin-top: 10px;
+  }
+  
+  .tts-button {
+    /* Smaller buttons for mobile but still touchable */
+    padding: 8px 12px;
+    font-size: 13px;
+    margin: 2px;
+  }
+}
+
+/* Landscape orientation adjustments for phones */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .accessibility-options {
+    max-height: 45vh; /* Shorter height in landscape mode */
+  }
+}
+
+/* Very small screens (older phones) */
+@media screen and (max-width: 320px) {
+  .accessibility-options {
+    max-height: 50vh;
+    font-size: 13px;
+    padding: 10px;
+  }
+  
+  .accessibility-option {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .accessibility-options {
+    max-height: 65vh;
+  }
+}
+
+/* Alternative approach: Height-based media queries for various screen sizes */
+@media screen and (max-height: 800px) {
+  .accessibility-options {
+    max-height: 60vh;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .accessibility-options {
+    max-height: 50vh;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .accessibility-options {
+    max-height: 45vh;
+  }
+}

@@ -253,6 +253,7 @@
                 this.readableContent = [];
                 this.currentIndex = 0;
                 this.settings = this.loadSettings();
+                this.isResetting = false; // Add flag to prevent announcements during reset
                 
                 this.init();
             }
@@ -269,8 +270,38 @@
                 this.bindEvents();
                 this.loadSavedSettings();
                 this.setupKeyboardShortcuts();
+                this.setupPageNavigationHandler(); // Add navigation handler
                 this.announcePageLoad();
                 this.updateSpeedDisplay();
+            }
+
+            // Add method to handle page navigation
+            setupPageNavigationHandler() {
+                // Stop TTS when page is about to unload
+                window.addEventListener('beforeunload', () => {
+                    this.stopTTS();
+                });
+
+                // Stop TTS when page becomes hidden (tab switching, etc.)
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden && this.isReading) {
+                        this.stopTTS();
+                    }
+                });
+
+                // Stop TTS on hash changes (SPA navigation)
+                window.addEventListener('hashchange', () => {
+                    if (this.isReading) {
+                        this.stopTTS();
+                    }
+                });
+
+                // Stop TTS on popstate events (back/forward navigation)
+                window.addEventListener('popstate', () => {
+                    if (this.isReading) {
+                        this.stopTTS();
+                    }
+                });
             }
 
             bindEvents() {
@@ -451,27 +482,24 @@
             // Text-to-Speech Methods
             getReadableText() {
                 const mainContent = document.querySelector('main') || document.querySelector('.demo-content') || document.body;
-                const textContent = [];
-                
                 const selectors = [
                     'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
                     'p', 'li', 'blockquote', 'figcaption'
                 ];
-                
-                selectors.forEach(selector => {
-                    const elements = mainContent.querySelectorAll(selector);
-                    elements.forEach(element => {
-                        const text = this.getCleanText(element);
-                        if (text && text.length > 3 && !this.isElementHidden(element)) {
-                            textContent.push({
-                                element: element,
-                                text: text,
-                                type: element.tagName.toLowerCase()
-                            });
-                        }
-                    });
+                const elements = Array.from(mainContent.querySelectorAll(selectors.join(',')));
+                const textContent = [];
+
+                elements.forEach(element => {
+                    const text = this.getCleanText(element);
+                    if (text && text.length > 3 && !this.isElementHidden(element)) {
+                        textContent.push({
+                            element: element,
+                            text: text,
+                            type: element.tagName.toLowerCase()
+                        });
+                    }
                 });
-                
+
                 return this.removeDuplicateContent(textContent);
             }
 
@@ -612,13 +640,15 @@
             }
 
             stopTTS() {
+                // Force stop all speech synthesis
                 this.speechSynthesis.cancel();
                 this.isReading = false;
                 this.currentIndex = 0;
+                this.currentUtterance = null;
                 
                 const startButton = document.getElementById('startTTS');
                 if (startButton) {
-                    startButton.innerHTML = '<i class="fas fa-play"></i> Start';
+                    startButton.innerHTML = '<i class="fas fa-play"></i> Start Reading';
                     startButton.classList.remove('active');
                 }
 
@@ -649,11 +679,17 @@
 
             // Utility Methods
             announceFeature(feature, isEnabled) {
+                // Don't announce during reset
+                if (this.isResetting) return;
+                
                 const status = isEnabled ? 'enabled' : 'disabled';
                 this.announceMessage(`${feature} ${status}`);
             }
 
             announceMessage(message) {
+                // Don't announce during reset
+                if (this.isResetting) return;
+                
                 let liveRegion = document.getElementById('yanda-live-region');
                 if (!liveRegion) {
                     liveRegion = document.createElement('div');
@@ -678,8 +714,13 @@
             }
 
             resetAll() {
+                // Set reset flag to prevent announcements
+                this.isResetting = true;
+                
+                // Force stop TTS immediately
                 this.stopTTS();
                 
+                // Remove all visual classes
                 document.body.classList.remove(
                     'high-contrast', 
                     'large-text', 
@@ -688,10 +729,12 @@
                     'no-animations'
                 );
                 
+                // Remove active states from buttons
                 document.querySelectorAll('.accessibility-option').forEach(option => {
                     option.classList.remove('active');
                 });
                 
+                // Reset settings
                 this.settings = {
                     highContrast: false,
                     largeText: false,
@@ -701,14 +744,29 @@
                     speechRate: 1
                 };
                 
+                // Reset speech rate slider
                 const speechRateInput = document.getElementById('speechRate');
                 if (speechRateInput) {
                     speechRateInput.value = 1;
                     this.updateSpeedDisplay();
                 }
                 
+                // Save settings
                 this.saveSettings();
-                this.announceMessage('All accessibility features reset');
+                
+                // Clear reset flag after a delay to allow for UI updates
+                setTimeout(() => {
+                    this.isResetting = false;
+                }, 500);
+                
+                // Announce reset without using the announceMessage method
+                const liveRegion = document.getElementById('yanda-live-region');
+                if (liveRegion) {
+                    liveRegion.textContent = '';
+                    setTimeout(() => {
+                        liveRegion.textContent = 'All accessibility features reset';
+                    }, 600); // Announce after reset flag is cleared
+                }
             }
 
             // Settings Management
