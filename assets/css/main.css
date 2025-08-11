@@ -1031,6 +1031,7 @@ section,
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
+/* Client Logos Section */
 .clients {
   padding: 20px 0;
   overflow: hidden;
@@ -1038,93 +1039,131 @@ section,
   width: 100%;
 }
 
-.logo-container {
-  display: flex;
-  animation: slide 20s linear infinite;
-  white-space: nowrap;
-  width: calc(200px * 14); /* Total width of all logos (7 original + 7 duplicate) */
-}
-
-.client-logo {
-  flex: 0 0 200px; /* Fixed width for each logo */
-  min-width: 200px; /* Ensure minimum width */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* .client-logo img {
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-} */
-
-.client-logo img {
-  padding: 20px 40px;
-  max-width: 90%;
-  transition: transform 0.3s ease, opacity 0.3s ease;
- 
-}
-
-@keyframes slide {
-  0% {
-      transform: translateX(0);
-  }
-  100% {
-      transform: translateX(-50%);
-  }
-}
-
-.clients .client-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.logo-container:hover {
-  animation-play-state: paused;
-}
-
-/* Container to clip visible area to 6 items */
+/* Container to clip visible area */
 .clients .container {
-  width: calc(200px * 6); /* Show exactly 6 items */
+  width: calc(250px * 6); /* CHANGE THIS: Show exactly 6 items on desktop - increase from 200px */
   margin: 0 auto;
   overflow: hidden;
 }
 
-@media (max-width: 640px) {
-  .client-logo img {
-      padding: 20px;
-  }
-  .clients .container {
-      width: 100%;
-  }
-  .client-logo {
-      flex: 0 0 calc(100% / 6);
-      min-width: calc(100% / 6);
-  }
+.logo-container {
+  display: flex;
+  animation: slide 20s linear infinite;
+  white-space: nowrap;
+  width: calc(250px * 22); /* CHANGE THIS: Total width - increase from 200px */
 }
 
-.clients .client-logo img {
-  padding: 20px 40px;
+.client-logo {
+  flex: 0 0 250px; /* CHANGE THIS: Fixed width for each logo - increase from 200px */
+  min-width: 250px; /* CHANGE THIS: Ensure minimum width - increase from 200px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-logo img {
+  padding: 25px 50px; /* CHANGE THIS: Increase padding from 20px 40px */
   max-width: 90%;
+  max-height: 100px; /* CHANGE THIS: Increase from 80px */
+  object-fit: contain;
   transition: transform 0.3s ease, opacity 0.3s ease;
- 
 }
 
-.clients .client-logo img:hover {
+.client-logo img:hover {
   filter: none;
   opacity: 1;
-  transform: scale(2.1);
+  transform: scale(1.1);
 }
 
-@media (max-width: 640px) {
-  .clients .client-logo img {
-    padding: 20px;
+/* Pause animation on hover */
+.logo-container:hover {
+  animation-play-state: paused;
+}
+
+/* Sliding animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .clients .container {
+    width: calc(220px * 3); /* CHANGE THIS: Show 3 items on tablet - increase from 180px */
+  }
+  
+  .logo-container {
+    width: calc(220px * 22); /* CHANGE THIS: Adjust total width for tablet - increase from 180px */
+  }
+  
+  .client-logo {
+    flex: 0 0 220px; /* CHANGE THIS: increase from 180px */
+    min-width: 220px; /* CHANGE THIS: increase from 180px */
+  }
+  
+  .client-logo img {
+    padding: 25px 35px; /* CHANGE THIS: Increase padding from 20px 30px */
+    max-height: 100px; /* CHANGE THIS: Increase from 80px */
+  }
+  
+  .client-logo img:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 640px) {
+  .clients .container {
+    width: calc(300px * 2); /* Increased from 200px */
+  }
+  
+  .logo-container {
+    width: calc(300px * 22); /* Increased from 200px */
+  }
+  
+  .client-logo {
+    flex: 0 0 300px; /* Increased from 200px */
+    min-width: 300px; /* Increased from 200px */
+  }
+  
+  .client-logo img {
+    padding: 35px 40px; /* Increased from 20px 25px */
+    max-height: 150px; /* Increased from 90px */
+  }
+}
+
+@media (max-width: 480px) {
+  .clients .container {
+    width: calc(300px * 1); /* Increased from 180px, show 1 per view */
+  }
+  
+  .logo-container {
+    width: calc(300px * 22); /* Increased from 180px */
+  }
+  
+  .client-logo {
+    flex: 0 0 300px; /* Increased from 180px */
+    min-width: 300px; /* Increased from 180px */
+  }
+  
+  .client-logo img {
+    padding: 35px 40px; /* Increased from 15px 20px */
+    max-height: 150px; /* Increased from 80px */
+  }
+}
+
+.client-logo img[src*="new tia.jpg"],
+.client-logo img[src*="afriLabs.png"],
+.client-logo img[src*="vendor-11.jpg"] ,
+.client-logo img[src*="vendor-14.jpg"],
+.client-logo img[src*="chieta.jpeg"],
+.client-logo img[src*="sefda.png"]{
+  max-height: 200px !important; /* Increased height */
+  padding: 40px 50px !important; /* Increased padding */
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
