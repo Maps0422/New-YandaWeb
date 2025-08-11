@@ -1,464 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Services - Yanda</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-
-    <!-- Favicons -->
-    <link href="assets/img/yandapic22.jpg" rel="icon" />
-    <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet" />
-  </head>
-
-  <body class="services-page">
-
-    <!-- Accessibility Menu -->
-  <div class="accessibility-menu">
-    <button class="accessibility-toggle" id="accessibilityToggle" aria-label="Accessibility Options">
-      <i class="fas fa-blind"></i>
-    </button>
-    
-    <div class="accessibility-options" id="accessibilityOptions">
-      <h6 style="margin-bottom: 15px; font-weight: bold; color: #333;">Accessibility Options</h6>
-      
-      <button class="accessibility-option" id="highContrast">
-        <i class="fas fa-adjust"></i>
-        High Contrast
-      </button>
-      
-      <button class="accessibility-option" id="largeText">
-        <i class="fas fa-font"></i>
-        Large Text
-      </button>
-      
-      <button class="accessibility-option" id="enhancedFocus">
-        <i class="fas fa-crosshairs"></i>
-        Enhanced Focus
-      </button>
-      
-      
-      
-      <button class="accessibility-option" id="pauseAnimations">
-        <i class="fas fa-pause"></i>
-        Pause Animations
-      </button>
-
-      <div class="tts-controls">
-        <h6 style="margin-bottom: 10px; font-weight: bold; color: #333;">Text-to-Speech</h6>
-        <button class="tts-button" id="startTTS">
-          <i class="fas fa-play"></i> Start Reading
-        </button>
-        <button class="tts-button" id="pauseTTS">
-          <i class="fas fa-pause"></i> Pause
-        </button>
-        <button class="tts-button" id="stopTTS">
-          <i class="fas fa-stop"></i> Stop
-        </button>
-        <div style="margin-top: 8px;">
-          <label style="font-size: 12px; color: #666;">Speed:</label>
-          <input type="range" id="speechRate" min="0.5" max="2" step="0.1" value="1" style="width: 100px; margin-left: 5px;">
-        </div>
-      </div>
-      
-      <button class="accessibility-option" id="resetAll" style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 15px;">
-        <i class="fas fa-undo"></i>
-        Reset All
-      </button>
-    </div>
-  </div>
-
-    <header id="header" class="header d-flex align-items-center sticky-top">
-      <div
-        class="container-fluid container-xl position-relative d-flex align-items-center"
-      >
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img
-            src="assets/img/yandapic2.png"
-            alt="Logo"
-            class="img-fluid me-2"
-            style="max-height: 120px"
-          />
-
-          <!-- <h1 class="sitename">Yanda</h1> -->
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-              <a href="about.html"
-                ><span>About</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
-              <ul>
-                <li><a href="testimonials.html">Testimonials</a></li>
-              </ul>
-            </li>
-            <li><a href="services.html" class="active">Services</a></li>
-
-            <li><a href="blog.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-        <a class="btn-getstarted" href="starter-page.html">Apply</a>
-      </div>
-    </header>
-
-    <main class="main">
-      <!-- Page Title -->
-      <div class="page-title light-background">
-        <div
-          class="container d-lg-flex justify-content-between align-items-center"
-        >
-          <h1 class="mb-2 mb-lg-0">Services</h1>
-          <nav class="breadcrumbs">
-            <ol>
-              <li><a href="index.html">Home</a></li>
-              <li class="current">Services</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-      <!-- End Page Title -->
-
-      <!-- Services Section -->
-     <!-- Services Section -->
-<section id="services" class="services section">
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-briefcase icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">Mentorship and Guidance:</a>
-            </h4>
-            <div class="service-content">
-              <p class="description">
-                Experienced mentors and advisors provide guidance on various
-                aspects of business development, including strategy,
-                marketing, finance, and operations. Networking
-                Opportunities: Access to a network of entrepreneurs,
-                investors, industry experts, and potential partners can help
-                startups expand their professional connections and
-                collaborations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Service Item -->
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-card-checklist icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">Access to Funding:</a>
-            </h4>
-            <div class="service-content">
-              <p class="description">
-                Incubators often provide access to funding sources such as
-                angel investors, venture capital firms, grants, and other
-                financing options to help startups secure the capital they
-                need to grow. Workspace and Infrastructure: Many incubators
-                offer affordable office space, co-working spaces,
-                laboratories, or production facilities equipped with
-                essential amenities and resources.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Service Item -->
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-bar-chart icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="" class="stretched-link">Business Development Support:</a>
-            </h4>
-            <div class="service-content">
-              <p class="description">
-                Software & App Development Assistance – Providing guidance
-                on building tech solutions. Hardware & Prototyping
-                Facilities –  IoT labs, Testing and
-                prototyping tools. Cloud Computing & AI Resources – Support
-                in implementing cloud-based and AI-driven solutions.
-                Cybersecurity Awareness & Protection – Training on securing
-                digital assets and protecting customer data. Tech Research &
-                Development (R&D) – Assistance with product innovation and
-                emerging technologies. -Commercialization Support
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Service Item -->
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-binoculars icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">Legal and Administrative Support:</a>
-            </h4>
-            <div class="service-content">
-              <p class="description">
-                Help with legal and administrative matters such as company
-                registration, intellectual property protection, contracts,
-                compliance, and regulatory requirements.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Service Item -->
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-brightness-high icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">Training and Workshops:</a>
-            </h4>
-            <div class="service-content">
-              <p class="description">
-                Training sessions, workshops, seminars, and educational
-                programs covering various business topics to enhance the
-                skills and knowledge of startup founders and teams.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-calendar4-week icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">Incubator Events and Pitch Opportunities:</a>
-            </h4>
-            <div class="service-content">
-              <p class="description">
-                Events like demo days, pitch competitions, investor
-                meetings, and industry conferences organized by incubators
-                provide startups with visibility, feedback, and potential
-                investment opportunities.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-people icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">Community and Peer Support:</a>
-            </h4>
-            <div class="service-content">
-              <p class="description">
-                Being part of an incubator community offers startups the
-                chance to interact with peers facing similar challenges,
-                share experiences, collaborate on projects, and gain
-                emotional support.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-laptop icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">Digital Skills Academy</a>
-            </h4>
-            <div class="service-content">
-              <p class="description">
-                Cutting-edge ICT & Digital Training programs. Cybersecurity,
-                AI, and Software Development courses. Industry-aligned
-                certification programmes. Tech-driven entrepreneurship and
-                business innovation training.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-building icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">Co-Working & Infrastructure Support</a>
-            </h4>
-            <div class="service-content">
-              <p class="description">
-                Affordable office space and shared workstations. High-speed
-                internet and digital tools access. Conference facilities and
-                equipped boardrooms. Creative innovation hub for
-                collaborative ideation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-rocket-takeoff icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">SME & Startup Acceleration Programmes</a>
-            </h4>
-            <div class="service-content">
-              <p class="description">
-                Tailored incubation programmes for startup growth.
-                Tech-Based SME Support for digital transformation.
-                Specialized programmes for Women & Youth in ICT empowerment.
-                Market access and scaling strategies.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-award icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">Quality Standard-Related Business Interventions</a>
-            </h4>
-            <div class="service-content">
-              <p class="description">
-                Implementation of Quality Management Systems (QMS). Product
-                and Service Standardization. Process Optimization and
-                Digital Transformation. Compliance with industry standards
-                and certifications.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-printer icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">3D Printing Services</a>
-            </h4>
-            <div class="service-content">
-              <ul class="description">
-                <li>Prototyping and Product Development.</li>
-                <li>Custom Manufacturing.</li>
-                <li>Design & Consultation Services.</li>
-                <li>3D Scanning and Reverse Engineering.</li>
-                <li>3D Printing for Art and Architecture.</li>
-                <li>3D Printing Maintenance and Repair.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-box icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">3D Animation & Graphics</a>
-            </h4>
-            <div class="service-content">
-              <p class="description">
-                Advanced 3D modeling and animation solutions for tech-driven applications, including product simulations, UI/UX visualizations, and immersive digital storytelling. Designed to enhance user engagement and innovation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item d-flex position-relative h-100">
-          <i class="bi bi-graph-up-arrow icon flex-shrink-0"></i>
-          <div>
-            <h4 class="title">
-              <a href="#" class="stretched-link">Commercialization Services</a>
-            </h4>
-            <div class="service-content">
-              <ul class="description">
-                <li>Market validation and customer segmentation</li>
-                <li>Go-to-market strategy and launch planning</li>
-                <li>Pilot testing coordination with target users</li>
-                <li>Regulatory compliance and certification guidance</li>
-                <li>Intellectual property protection and licensing support</li>
-                <li>Branding, packaging design, and messaging refinement</li>
-                <li>Distribution channel identification and partnerships</li>
-                <li>Sales enablement tools and training</li>
-                <li>Investor matchmaking and pitch deck development</li>
-                <li>Marketing campaign strategy and execution</li>
-                <li>Customer feedback integration and continuous improvement</li>
-                <li>Pricing strategy development and revenue modeling</li>
-                <li>Corporate partnership facilitation and logistics support</li>
-                <li>Scaling and operational capacity building through mentorship</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- /Services Section -->
-
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services - Yanda</title>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<!-- Favicons -->
+<link href="assets/img/yandapic22.jpg" rel="icon"/>
+<!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+<link href="assets/vendor/aos/aos.css" rel="stylesheet"/>
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+<!-- Main CSS File -->
+<link href="assets/css/main.css" rel="stylesheet"/>
 <style>
 .service-content {
   position: relative;
+  margin-bottom: 15px;
+}
+
+.service-content .description {
+  transition: all 0.3s ease;
+  position: relative;
+  margin-bottom: 0;
 }
 
 .description-collapsed {
@@ -467,28 +40,42 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   position: relative;
+  max-height: 6em; /* Fallback for non-webkit browsers */
 }
 
 .read-more-btn {
-  background: none;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
   border: none;
-  color: #007bff;
+  border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
-  padding: 5px 0;
+  padding: 8px 16px;
   margin-top: 10px;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 14px;
 }
 
 .read-more-btn:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
 }
 
 .read-more-btn:focus {
-  outline: 2px solid #007bff;
+  outline: 2px solid rgba(0, 123, 255, 0.3);
   outline-offset: 2px;
+}
+
+.read-more-btn i {
+  margin-left: 8px;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.read-more-btn[aria-expanded="true"] i {
+  transform: rotate(180deg);
 }
 
 .fade-gradient {
@@ -501,197 +88,504 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 20px;
-  background: linear-gradient(transparent, #fff);
+  height: 30px;
+  background: linear-gradient(to bottom, 
+              rgba(255,255,255,0) 0%, 
+              rgba(255,255,255,0.8) 50%, 
+              rgba(255,255,255,1) 100%);
   pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-.fade-gradient.expanded::after {
-  display: none;
+.description-expanded {
+  -webkit-line-clamp: unset !important;
+  display: block !important;
+  max-height: none !important;
+}
+
+.service-item ul.description {
+  padding-left: 20px;
 }
 </style>
+</head>
+<body class="services-page">
+<!-- Accessibility Menu -->
+<div class="accessibility-menu">
+<button aria-label="Accessibility Options" class="accessibility-toggle" id="accessibilityToggle">
+<i class="fas fa-blind"></i>
+</button>
+<div class="accessibility-options" id="accessibilityOptions">
+<h6 style="margin-bottom: 15px; font-weight: bold; color: #333">
+          Accessibility Options
+        </h6>
+<button class="accessibility-option" id="highContrast">
+<i class="fas fa-adjust"></i>
+          High Contrast
+        </button>
+<button class="accessibility-option" id="largeText">
+<i class="fas fa-font"></i>
+          Large Text
+        </button>
+<button class="accessibility-option" id="enhancedFocus">
+<i class="fas fa-crosshairs"></i>
+          Enhanced Focus
+        </button>
+<button class="accessibility-option" id="pauseAnimations">
+<i class="fas fa-pause"></i>
+          Pause Animations
+        </button>
+<div class="tts-controls">
+<h6 style="margin-bottom: 10px; font-weight: bold; color: #333">
+            Text-to-Speech
+          </h6>
+<button class="tts-button" id="startTTS">
+<i class="fas fa-play"></i> Start Reading
+          </button>
+<button class="tts-button" id="pauseTTS">
+<i class="fas fa-pause"></i> Pause
+          </button>
+<button class="tts-button" id="stopTTS">
+<i class="fas fa-stop"></i> Stop
+          </button>
+<div style="margin-top: 8px">
+<label style="font-size: 12px; color: #666">Speed:</label>
+<input id="speechRate" max="2" min="0.5" step="0.1" style="width: 100px; margin-left: 5px" type="range" value="1"/>
+</div>
+</div>
+<button class="accessibility-option" id="resetAll" style="
+            margin-top: 10px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+          ">
+<i class="fas fa-undo"></i>
+          Reset All
+        </button>
+</div>
+</div>
+<header class="header d-flex align-items-center sticky-top" id="header">
+<div class="container-fluid container-xl position-relative d-flex align-items-center">
+<a class="logo d-flex align-items-center me-auto" href="index.html">
+<!-- Uncomment the line below if you also wish to use an image logo -->
+<img alt="Logo" class="img-fluid me-2" src="assets/img/yandapic2.png" style="max-height: 120px"/>
+<!-- <h1 class="sitename">Yanda</h1> -->
+</a>
+<nav class="navmenu" id="navmenu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li class="dropdown">
+<a href="about.html"><span>About</span>
+<i class="bi bi-chevron-down toggle-dropdown"></i></a>
+<ul>
+<li><a href="testimonials.html">Testimonials</a></li>
+</ul>
+</li>
+<li><a class="active" href="services.html">Services</a></li>
+<li><a href="blog.html">News</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+<a class="btn-getstarted" href="starter-page.html">Apply</a>
+</div>
+</header>
+<main class="main">
+<!-- Page Title -->
+<div class="page-title light-background">
+<div class="container d-lg-flex justify-content-between align-items-center">
+<h1 class="mb-2 mb-lg-0">Services</h1>
+<nav class="breadcrumbs">
+<ol>
+<li><a href="index.html">Home</a></li>
+<li class="current">Services</li>
+</ol>
+</nav>
+</div>
+</div>
+<!-- End Page Title -->
+<!-- Services Section -->
+<section class="services section" id="services">
+<div class="container">
+<div class="row gy-4">
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-briefcase icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">Mentorship and Guidance</a>
+</h4>
+<div class="service-content">
+<p class="description">
+                Experienced mentors and advisors provide guidance on various
+                aspects of business development, including strategy,
+                marketing, finance, and operations. Networking
+                Opportunities: Access to a network of entrepreneurs,
+                investors, industry experts, and potential partners can help
+                startups expand their professional connections and
+                collaborations.
+              </p>
+>
+</div>
+</div>
+</div>
+</div>
+<!-- End Service Item -->
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-card-checklist icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">Access to Funding</a>
+</h4>
+<div class="service-content">
+<p class="description">
+                Incubators often provide access to funding sources such as
+                angel investors, venture capital firms, grants, and other
+                financing options to help startups secure the capital they
+                need to grow. Workspace and Infrastructure: Many incubators
+                offer affordable office space, co-working spaces,
+                laboratories, or production facilities equipped with
+                essential amenities and resources.
+              </p>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const serviceContents = document.querySelectorAll('.service-content');
-    
-    serviceContents.forEach(content => {
-        const description = content.querySelector('.description');
-        if (!description) return;
-        
-        // Create a temporary element to measure height
-        const temp = description.cloneNode(true);
-        temp.style.position = 'absolute';
-        temp.style.visibility = 'hidden';
-        temp.style.height = 'auto';
-        temp.style.webkitLineClamp = 'none';
-        temp.style.display = 'block';
-        temp.style.maxWidth = description.offsetWidth + 'px';
-        document.body.appendChild(temp);
-        
-        const fullHeight = temp.offsetHeight;
-        document.body.removeChild(temp);
-        
-        // Check if content exceeds 4 lines (approximately 96px for line-height 1.6 and 16px font)
-        const computedStyle = getComputedStyle(description);
-        const lineHeight = parseFloat(computedStyle.lineHeight) || 24;
-        const maxHeight = lineHeight * 4;
-        
-        if (fullHeight > maxHeight) {
-            // Add collapsed class and fade gradient
-            description.classList.add('description-collapsed', 'fade-gradient');
-            
-            // Create read more button
-            const readMoreBtn = document.createElement('button');
-            readMoreBtn.className = 'read-more-btn';
-            readMoreBtn.textContent = 'Read more';
-            readMoreBtn.setAttribute('aria-expanded', 'false');
-            
-            // Insert button after description
-            description.parentNode.insertBefore(readMoreBtn, description.nextSibling);
-            
-            // Add click event
-            readMoreBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                if (description.classList.contains('description-collapsed')) {
-                    // Expand
-                    description.classList.remove('description-collapsed', 'fade-gradient');
-                    description.classList.add('expanded');
-                    readMoreBtn.textContent = 'Read less';
-                    readMoreBtn.setAttribute('aria-expanded', 'true');
-                } else {
-                    // Collapse
-                    description.classList.add('description-collapsed', 'fade-gradient');
-                    description.classList.remove('expanded');
-                    readMoreBtn.textContent = 'Read more';
-                    readMoreBtn.setAttribute('aria-expanded', 'false');
-                    
-                    // Scroll to top of service item
-                    description.closest('.service-item').scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'nearest'
-                    });
-                }
-            });
-        }
-    });
-});
-</script>
-      <!-- /Services Section -->
-    </main>
+</div>
+</div>
+</div>
+</div>
+<!-- End Service Item -->
 
-    <footer id="footer" class="footer dark-background">
-      <div class="container footer-top">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">Contact Us</span>
-            </a>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-box icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">3D Animation &amp; Graphics</a>
+</h4>
+<div class="service-content">
+<p class="description">
+                Advanced 3D modeling and animation solutions for tech-driven applications, including product simulations, UI/UX visualizations, and immersive digital storytelling. Designed to enhance user engagement and innovation.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- End Service Item -->
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-binoculars icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">Legal and Administrative Support</a>
+</h4>
+<div class="service-content">
+<p class="description">
+                Help with legal and administrative matters such as company
+                registration, intellectual property protection, contracts,
+                compliance, and regulatory requirements.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- End Service Item -->
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-brightness-high icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">Training and Workshops</a>
+</h4>
+<div class="service-content">
+<p class="description">
+                Training sessions, workshops, seminars, and educational
+                programs covering various business topics to enhance the
+                skills and knowledge of startup founders and teams.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-calendar4-week icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">Incubator Events and Pitch Opportunities</a>
+</h4>
+<div class="service-content">
+<p class="description">
+                Events like demo days, pitch competitions, investor
+                meetings, and industry conferences organized by incubators
+                provide startups with visibility, feedback, and potential
+                investment opportunities.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-people icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">Community and Peer Support</a>
+</h4>
+<div class="service-content">
+<p class="description">
+                Being part of an incubator community offers startups the
+                chance to interact with peers facing similar challenges,
+                share experiences, collaborate on projects, and gain
+                emotional support.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-laptop icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">Digital Skills Academy</a>
+</h4>
+<div class="service-content">
+<p class="description">
+                Cutting-edge ICT &amp; Digital Training programs. Cybersecurity,
+                AI, and Software Development courses. Industry-aligned
+                certification programmes. Tech-driven entrepreneurship and
+                business innovation training.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-building icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">Co-Working &amp; Infrastructure Support</a>
+</h4>
+<div class="service-content">
+<p class="description">
+                Affordable office space and shared workstations. High-speed
+                internet and digital tools access. Conference facilities and
+                equipped boardrooms. Creative innovation hub for
+                collaborative ideation.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-rocket-takeoff icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">SME &amp; Startup Acceleration Programmes</a>
+</h4>
+<div class="service-content">
+<p class="description">
+                Tailored incubation programmes for startup growth.
+                Tech-Based SME Support for digital transformation.
+                Specialized programmes for Women &amp; Youth in ICT empowerment.
+                Market access and scaling strategies.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-award icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">Quality Standard-Related Business Interventions</a>
+</h4>
+<div class="service-content">
+<p class="description">
+                Implementation of Quality Management Systems (QMS). Product
+                and Service Standardization. Process Optimization and
+                Digital Transformation. Compliance with industry standards
+                and certifications.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-printer icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">3D Printing Services</a>
+</h4>
+<div class="service-content">
+<ul class="description">
+<li>Prototyping and Product Development.</li>
+<li>Custom Manufacturing.</li>
+<li>Design &amp; Consultation Services.</li>
+<li>3D Scanning and Reverse Engineering.</li>
+<li>3D Printing for Art and Architecture.</li>
+<li>3D Printing Maintenance and Repair.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-bar-chart icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="">Business Development Support</a>
+</h4>
+<div class="service-content">
+<p class="description">
+                Software &amp; App Development Assistance – Providing guidance
+                on building tech solutions. Hardware &amp; Prototyping
+                Facilities –  IoT labs, Testing and
+                prototyping tools. Cloud Computing &amp; AI Resources – Support
+                in implementing cloud-based and AI-driven solutions.
+                Cybersecurity Awareness &amp; Protection – Training on securing
+                digital assets and protecting customer data. Tech Research &amp;
+                Development (R&amp;D) – Assistance with product innovation and
+                emerging technologies. -Commercialization Support
+              </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+<div class="service-item d-flex position-relative h-100">
+<i class="bi bi-graph-up-arrow icon flex-shrink-0"></i>
+<div>
+<h4 class="title">
+<a class="stretched-link" href="#">Commercialization Services</a>
+</h4>
+<div class="service-content">
+<ul class="description">
+<li>Market validation and customer segmentation</li>
+<li>Go-to-market strategy and launch planning</li>
+<li>Pilot testing coordination with target users</li>
+<li>Regulatory compliance and certification guidance</li>
+<li>Intellectual property protection and licensing support</li>
+<li>Branding, packaging design, and messaging refinement</li>
+<li>Distribution channel identification and partnerships</li>
+<li>Sales enablement tools and training</li>
+<li>Investor matchmaking and pitch deck development</li>
+<li>Marketing campaign strategy and execution</li>
+<li>Customer feedback integration and continuous improvement</li>
+<li>Pricing strategy development and revenue modeling</li>
+<li>Corporate partnership facilitation and logistics support</li>
+<li>Scaling and operational capacity building through mentorship</li>
 
-            <p class="mt-3">
-              <strong>Phone:</strong> <span> 012 844 0048</span>
-            </p>
-            <p><strong>Email:</strong> <span> info@yandacie.co.za</span></p>
-            <p>
-              <strong>Address:</strong><br />
-              <span
-                >309-Js, Elandsfontein,<br />
-                1449, eMalahleni, <br />
-                1035</span
-              >
-            </p>
-
-            <div class="social-links d-flex mt-4">
-              <a href="https://x.com/yandabdste_cent?s=11"
-                ><i class="bi bi-twitter-x"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/yanda_cie?igsh=MWxpbGJoaXV5MzhjYg=="
-                ><i class="bi bi-instagram"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/yanda-centre-of-innovation-and-entrepreneurship-335560305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About us</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="blog.html">News</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="services.html">Mentorship and Guidance</a></li>
-              <li><a href="services.html">Access to Funding</a></li>
-              <li><a href="services.html">Business Development Support</a></li>
-              <li>
-                <a href="services.html">Legal and Administrative Support</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-12 footer-newsletter">
-            <img
-              src="assets/img/Yanda white transparent.png"
-              alt="Logo"
-              class="img-fluid me-2"
-              style="max-height: 200px"
-            />
-          </div>
-        </div>
-      </div>
-
-      <a
-        href="https://wa.me/+27720592374"
-        class="whatsapp-icon"
-        target="_blank"
-      >
-        <i class="fab fa-whatsapp icon"></i>
-      </a>
-
-      <div class="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> Yanda <span>All Rights Reserved</span></p>
-        <div class="credits">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- /Services Section -->
+</main>
+<footer class="footer dark-background" id="footer">
+<div class="container footer-top">
+<div class="row gy-4">
+<div class="col-lg-4 col-md-6 footer-about">
+<a class="logo d-flex align-items-center" href="index.html">
+<span class="sitename">Contact Us</span>
+</a>
+<p class="mt-3">
+<strong>Phone:</strong> <span> 012 844 0048</span>
+</p>
+<p><strong>Email:</strong> <span> info@yandacie.co.za</span></p>
+<p>
+<strong>Address:</strong><br/>
+<span>309-Js, Elandsfontein,<br/>
+                1449, eMalahleni, <br/>
+                1035</span>
+</p>
+<div class="social-links d-flex mt-4">
+<a href="https://x.com/yandabdste_cent?s=11"><i class="bi bi-twitter-x"></i></a>
+<a href="https://www.instagram.com/yanda_cie?igsh=MWxpbGJoaXV5MzhjYg=="><i class="bi bi-instagram"></i></a>
+<a href="https://www.linkedin.com/in/yanda-centre-of-innovation-and-entrepreneurship-335560305?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app"><i class="bi bi-linkedin"></i></a>
+</div>
+</div>
+<div class="col-lg-2 col-md-3 footer-links">
+<h4>Useful Links</h4>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About us</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="blog.html">News</a></li>
+</ul>
+</div>
+<div class="col-lg-2 col-md-3 footer-links">
+<h4>Our Services</h4>
+<ul>
+<li><a href="services.html">Mentorship and Guidance</a></li>
+<li><a href="services.html">Access to Funding</a></li>
+<li><a href="services.html">Business Development Support</a></li>
+<li>
+<a href="services.html">Legal and Administrative Support</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-12 footer-newsletter">
+<img alt="Logo" class="img-fluid me-2" src="assets/img/Yanda white transparent.png" style="max-height: 200px"/>
+</div>
+</div>
+</div>
+<a class="whatsapp-icon" href="https://wa.me/+27720592374" target="_blank">
+<i class="fab fa-whatsapp icon"></i>
+</a>
+<div class="container copyright text-center mt-4">
+<p>© <span>Copyright</span> Yanda <span>All Rights Reserved</span></p>
+<div class="credits">
           Designed by
           <a href="https://www.shuduconnections.com/">Shudu Connections</a>
-        </div>
-      </div>
-    </footer>
+</div>
+</div>
+</footer>
+<!-- Scroll Top -->
+<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Preloader -->
+<div id="preloader"></div>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
 
-    <!-- Scroll Top -->
-    <a
-      href="#"
-      id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".service-content").forEach(function (content) {
+    const desc = content.querySelector(".description");
+    const btn = content.querySelector(".read-more-btn");
+    if (!desc || !btn) return;
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
+    // Start collapsed
+    desc.classList.add("description-collapsed");
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
-  </body>
+    btn.addEventListener("click", function () {
+      const isExpanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", !isExpanded);
+      desc.classList.toggle("description-expanded");
+      desc.classList.toggle("description-collapsed");
+      btn.innerHTML = !isExpanded
+        ? 'Read Less <i class="bi bi-chevron-up"></i>'
+        : 'Read More <i class="bi bi-chevron-down"></i>';
+    });
+  });
+});
+</script>
+</body>
 </html>
