@@ -1041,7 +1041,7 @@ section,
 
 /* Container to clip visible area */
 .clients .container {
-  width: calc(250px * 6); /* CHANGE THIS: Show exactly 6 items on desktop - increase from 200px */
+  width: calc(200px * 6); /* Show exactly 6 items on desktop */
   margin: 0 auto;
   overflow: hidden;
 }
@@ -1050,21 +1050,21 @@ section,
   display: flex;
   animation: slide 20s linear infinite;
   white-space: nowrap;
-  width: calc(250px * 22); /* CHANGE THIS: Total width - increase from 200px */
+  width: calc(200px * 22); /* Total width */
 }
 
 .client-logo {
-  flex: 0 0 250px; /* CHANGE THIS: Fixed width for each logo - increase from 200px */
-  min-width: 250px; /* CHANGE THIS: Ensure minimum width - increase from 200px */
+  flex: 0 0 200px; /* Fixed width for each logo */
+  min-width: 200px; /* Ensure minimum width */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .client-logo img {
-  padding: 25px 50px; /* CHANGE THIS: Increase padding from 20px 40px */
+  padding: 20px 20px; /* size between*/
   max-width: 90%;
-  max-height: 100px; /* CHANGE THIS: Increase from 80px */
+  max-height: 100px;
   object-fit: contain;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -1082,32 +1082,28 @@ section,
 
 /* Sliding animation */
 @keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
   .clients .container {
-    width: calc(220px * 3); /* CHANGE THIS: Show 3 items on tablet - increase from 180px */
+    width: calc(180px * 3); /* Show 3 items on tablet */
   }
   
   .logo-container {
-    width: calc(220px * 22); /* CHANGE THIS: Adjust total width for tablet - increase from 180px */
+    width: calc(180px * 22);
   }
   
   .client-logo {
-    flex: 0 0 220px; /* CHANGE THIS: increase from 180px */
-    min-width: 220px; /* CHANGE THIS: increase from 180px */
+    flex: 0 0 180px;
+    min-width: 180px;
   }
   
   .client-logo img {
-    padding: 25px 35px; /* CHANGE THIS: Increase padding from 20px 30px */
-    max-height: 100px; /* CHANGE THIS: Increase from 80px */
+    padding: 18px 18px; /* size between */
+    max-height: 100px;
   }
   
   .client-logo img:hover {
@@ -1117,53 +1113,60 @@ section,
 
 @media (max-width: 640px) {
   .clients .container {
-    width: calc(300px * 2); /* Increased from 200px */
+    width: calc(220px * 2); /* Show 2 items */
   }
   
   .logo-container {
-    width: calc(300px * 22); /* Increased from 200px */
+    width: calc(220px * 22);
   }
   
   .client-logo {
-    flex: 0 0 300px; /* Increased from 200px */
-    min-width: 300px; /* Increased from 200px */
+    flex: 0 0 220px;
+    min-width: 220px;
   }
   
   .client-logo img {
-    padding: 35px 40px; /* Increased from 20px 25px */
-    max-height: 150px; /* Increased from 90px */
+    padding: 20px 20px; /* size between */
+    max-height: 130px;
   }
 }
 
 @media (max-width: 480px) {
   .clients .container {
-    width: calc(300px * 1); /* Increased from 180px, show 1 per view */
+    width: calc(220px * 1); /* Show 1 per view */
   }
   
   .logo-container {
-    width: calc(300px * 22); /* Increased from 180px */
+    width: calc(220px * 22);
   }
   
   .client-logo {
-    flex: 0 0 300px; /* Increased from 180px */
-    min-width: 300px; /* Increased from 180px */
+    flex: 0 0 220px;
+    min-width: 220px;
   }
   
   .client-logo img {
-    padding: 35px 40px; /* Increased from 15px 20px */
-    max-height: 150px; /* Increased from 80px */
+    padding: 18px 18px; /* size between */
+    max-height: 130px;
   }
 }
 
-.client-logo img[src*="new tia.jpg"],
-.client-logo img[src*="afriLabs.png"],
+
+
 .client-logo img[src*="vendor-11.jpg"] ,
 .client-logo img[src*="vendor-14.jpg"],
-.client-logo img[src*="chieta.jpeg"],
-.client-logo img[src*="sefda.png"]{
-  max-height: 200px !important; /* Increased height */
-  padding: 40px 50px !important; /* Increased padding */
+.client-logo img[src*="chieta.jpeg"]{
+  max-height: 150px !important;
+  padding: 18px 18px !important; /* Reduced special padding */
 }
+
+.client-logo img[src*="shudu2Logo.png"]{
+  max-height: 115px !important;
+  padding: 18px 18px !important; /* Reduced special padding */
+}
+
+
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
