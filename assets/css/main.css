@@ -1032,141 +1032,187 @@ section,
 # Clients Section
 --------------------------------------------------------------*/
 /* Client Logos Section */
-.clients {
-  padding: 20px 0;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
+/* Client Logos Section */
+        .clients {
+            padding: 40px 0;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            background: #ffffff;
+        }
 
-/* Container to clip visible area */
-.clients .container {
-  width: calc(200px * 6); /* Show exactly 6 items on desktop */
-  margin: 0 auto;
-  overflow: hidden;
-}
+        /* .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
 
-.logo-container {
-  display: flex;
-  animation: slide 20s linear infinite;
-  white-space: nowrap;
-  width: calc(200px * 22); /* Total width */
-}
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin: 0 0 1rem 0;
+            font-weight: 600;
+        }
 
-.client-logo {
-  flex: 0 0 200px; /* Fixed width for each logo */
-  min-width: 200px; /* Ensure minimum width */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        .section-title p {
+            font-size: 1.2rem;
+            color: #666;
+            margin: 0;
+        } */
 
-.client-logo img {
-  padding: 20px 20px; /* size between*/
-  max-width: 90%;
-  max-height: 100px;
-  object-fit: contain;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
+        /* Container to clip visible area */
+        .clients .container {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
 
-.client-logo img:hover {
-  filter: none;
-  opacity: 1;
-  transform: scale(1.1);
-}
+        .logo-container {
+            display: flex;
+            animation: slide 15s linear infinite;
+            white-space: nowrap;
+            width: max-content;
+        }
 
-/* Pause animation on hover */
-.logo-container:hover {
-  animation-play-state: paused;
-}
+        .client-logo {
+            flex: 0 0 200px;
+            min-width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 140px;
+        }
 
-/* Sliding animation */
-@keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+        .client-logo img {
+            padding: 20px;
+            max-width: 90%;
+            max-height: 100px;
+            object-fit: contain;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0.8;
+        }
 
-/* Mobile Responsive Design */
-@media (max-width: 768px) {
-  .clients .container {
-    width: calc(180px * 3); /* Show 3 items on tablet */
-  }
-  
-  .logo-container {
-    width: calc(180px * 22);
-  }
-  
-  .client-logo {
-    flex: 0 0 180px;
-    min-width: 180px;
-  }
-  
-  .client-logo img {
-    padding: 18px 18px; /* size between */
-    max-height: 100px;
-  }
-  
-  .client-logo img:hover {
-    transform: scale(1.05);
-  }
-}
+        .client-logo img:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
 
-@media (max-width: 640px) {
-  .clients .container {
-    width: calc(220px * 2); /* Show 2 items */
-  }
-  
-  .logo-container {
-    width: calc(220px * 22);
-  }
-  
-  .client-logo {
-    flex: 0 0 220px;
-    min-width: 220px;
-  }
-  
-  .client-logo img {
-    padding: 20px 20px; /* size between */
-    max-height: 130px;
-  }
-}
+        /* Pause animation on hover */
+        .logo-container:hover {
+            animation-play-state: paused;
+        }
 
-@media (max-width: 480px) {
-  .clients .container {
-    width: calc(220px * 1); /* Show 1 per view */
-  }
-  
-  .logo-container {
-    width: calc(220px * 22);
-  }
-  
-  .client-logo {
-    flex: 0 0 220px;
-    min-width: 220px;
-  }
-  
-  .client-logo img {
-    padding: 18px 18px; /* size between */
-    max-height: 130px;
-  }
-}
+        /* Sliding animation - Move exactly one set of logos */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-2400px); /* 12 logos × 200px */
+            }
+        }
 
+        /* Special logo adjustments */
+        .client-logo img[src*="vendor-11.jpg"],
+        .client-logo img[src*="vendor-14.jpg"],
+        .client-logo img[src*="chieta.jpeg"] {
+            max-height: 120px !important;
+            padding: 15px !important;
+        }
 
+        .client-logo img[src*="shudu2Logo.png"] {
+            max-height: 80px !important;
+            padding: 20px !important;
+        }
 
-.client-logo img[src*="vendor-11.jpg"] ,
-.client-logo img[src*="vendor-14.jpg"],
-.client-logo img[src*="chieta.jpeg"]{
-  max-height: 150px !important;
-  padding: 18px 18px !important; /* Reduced special padding */
-}
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
 
-.client-logo img[src*="shudu2Logo.png"]{
-  max-height: 115px !important;
-  padding: 18px 18px !important; /* Reduced special padding */
-}
+            .logo-container {
+                animation: slide-tablet 35s linear infinite;
+            }
 
+            .client-logo {
+                flex: 0 0 180px;
+                min-width: 180px;
+                height: 120px;
+            }
 
+            .client-logo img {
+                padding: 18px;
+                max-height: 80px;
+            }
 
+            .client-logo img:hover {
+                transform: scale(1.05);
+            }
+
+            @keyframes slide-tablet {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-2160px); /* 12 logos × 180px */
+                }
+            }
+        }
+
+        @media (max-width: 640px) {
+            .logo-container {
+                animation: slide-mobile 30s linear infinite;
+            }
+
+            .client-logo {
+                flex: 0 0 160px;
+                min-width: 160px;
+                height: 110px;
+            }
+
+            .client-logo img {
+                padding: 15px;
+                max-height: 70px;
+            }
+
+            @keyframes slide-mobile {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-1920px); /* 12 logos × 160px */
+                }
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .logo-container {
+                animation: slide-small 25s linear infinite;
+            }
+
+            .client-logo {
+                flex: 0 0 140px;
+                min-width: 140px;
+                height: 100px;
+            }
+
+            .client-logo img {
+                padding: 12px;
+                max-height: 60px;
+            }
+
+            @keyframes slide-small {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-1680px); /* 12 logos × 140px */
+                }
+            }}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
